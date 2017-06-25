@@ -45,4 +45,12 @@
             (next-file (kh-next-item index list)))
         next-file))
 
+(defun kh-find-prev-file ()
+    (interactive)
+    (find-file (kh-prev-file)))
+
+(defun kh-find-next-file ()
+    (interactive)
+    (find-file (kh-next-file)))
+
 (provide 'Kenrituhitiyutukuwanmahe)
