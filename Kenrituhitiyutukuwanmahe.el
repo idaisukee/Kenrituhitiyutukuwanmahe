@@ -32,7 +32,6 @@
         (
             (index (kh-current-file-index))
             (list (f-files "."))
-            (dir (->> (f-this-file) f-dirname))
             (prev-file (kh-prev-item index list)))
         prev-file))
 
@@ -41,7 +40,6 @@
         (
             (index (kh-current-file-index))
             (list (f-files "."))
-            (dir (->> (f-this-file) f-dirname))
             (next-file (kh-next-item index list)))
         next-file))
 
