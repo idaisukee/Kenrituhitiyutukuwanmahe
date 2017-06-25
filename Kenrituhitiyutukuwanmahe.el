@@ -24,7 +24,6 @@
     (let*
         (
             (list (f-files "."))
-            ;;            (file (->> (f-this-file) f-filename)))
             (file (f-this-file)))
         (-elem-index file list)))
         
