@@ -1,5 +1,7 @@
 (require 'dash)
 
+;; (f--files "." (equal (f-ext it) "log"))
+
 (defun kh-prev-item (index list)
     "returns the prev item the item you order in the list."
     (-first-item (kh-prev-phalanx index list)))
