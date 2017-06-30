@@ -57,7 +57,7 @@
     (interactive)
     (kh-find-prev-file "shell"))
 
-(defun kh-find-next-file ()
+(defun kh-find-next-file-ksu ()
     (interactive)
     (kh-find-next-file "shell"))
 
