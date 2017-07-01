@@ -27,7 +27,7 @@
     "returns the list whose first item is next of what you order."
     (-rotate (+ (- index) -1) list))
 
-(defun kh-n-next-phalanx (index list)
+(defun kh-n-next-phalanx (index n list)
     "returns the list whose first item is next of what you order."
     (-rotate (+ (- index) (- n)) list))
 
@@ -54,11 +54,13 @@
             (next-file (kh-next-item index list)))
         next-file))
 
-(defun kh-n-next-file (ext n)
+(defun kh-n-next-file (n ext)
     (let*
-        (index (kh-current-file-index ext))
-        (list (f--files "." (equal (f-ext it) ext)))
-        (n-next-file (kh-n-next-item index n list))))
+        (
+            (index (kh-current-file-index ext))
+            (list (f--files "." (equal (f-ext it) ext)))
+            (n-next-file (kh-n-next-item index n list)))
+        n-next-file))
 
 
 (defun kh-find-prev-file (ext)
