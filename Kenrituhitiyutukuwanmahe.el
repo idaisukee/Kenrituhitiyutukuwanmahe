@@ -38,22 +38,6 @@
             (file (f-this-file)))
         (-elem-index file list)))
 
-(defun kh-prev-file (ext)
-    (let*
-        (
-            (index (kh-current-file-index ext))
-            (list (f--files "." (equal (f-ext it) ext)))
-            (prev-file (kh-prev-item index list)))
-        prev-file))
-
-(defun kh-next-file (ext)
-    (let*
-        (
-            (index (kh-current-file-index ext))
-            (list (f--files "." (equal (f-ext it) ext)))
-            (next-file (kh-next-item index list)))
-        next-file))
-
 (defun kh-n-next-file (n ext)
     (let*
         (
