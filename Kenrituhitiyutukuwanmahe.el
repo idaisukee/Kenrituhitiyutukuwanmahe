@@ -3,14 +3,6 @@
 
 ;; (f--files "." (equal (f-ext it) "el"))
 
-(defun kh-prev-item (index list)
-    "returns the prev item the item you order in the list."
-    (-first-item (kh-prev-phalanx index list)))
-
-(defun kh-next-item (index list)
-    "returns the prev item the item you order in the list."
-    (-first-item (kh-next-phalanx index list)))
-
 (defun kh-n-next-item (index n list)
     "returns the n-next item of the item you order."
     (-first-item (kh-n-next-phalanx index n list)))
@@ -18,14 +10,6 @@
 (defun kh-phalanx (index list)
     "returns the list whose first item is what you order."
     (-rotate (- index) list))
-
-(defun kh-prev-phalanx (index list)
-    "returns the list whose first item is prev of what you order."
-    (-rotate (+ (- index) 1) list))
-
-(defun kh-next-phalanx (index list)
-    "returns the list whose first item is next of what you order."
-    (-rotate (+ (- index) -1) list))
 
 (defun kh-n-next-phalanx (index n list)
     "returns the list whose first item is next of what you order."
