@@ -62,6 +62,9 @@
             (n-next-file (kh-n-next-item index n list)))
         n-next-file))
 
+(defun kh-find-n-next-file (n ext)
+    (interactive)
+    (find-file (kh-n-next-file n ext)))
 
 (defun kh-find-prev-file (ext)
     (interactive)
@@ -70,9 +73,5 @@
 (defun kh-find-next-file (ext)
     (interactive)
     (kh-find-n-next-file 1 ext))
-
-(defun kh-find-n-next-file (n ext)
-    (interactive)
-    (find-file (kh-n-next-file n ext)))
 
 (provide 'Kenrituhitiyutukuwanmahe)
