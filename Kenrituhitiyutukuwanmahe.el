@@ -13,7 +13,10 @@
 
 (defun kh-n-next-phalanx (index n list)
     "returns the list whose first item is next of what you order."
-    (-rotate (+ (- index) (- n)) list))
+    (let*
+        (
+            (phalanx (kh-phalanx index list)))
+        (-rotate (- n) phalanx)))
 
 (defun kh-current-file-index (ext)
     (let*
